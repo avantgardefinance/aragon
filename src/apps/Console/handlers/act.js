@@ -10,7 +10,7 @@ export default async function actHandler(params, { wrapper }) {
   ] = params
   let [methodName, methodParams, methodArgs] = parseMethodCall(methodWithArgs)
 
-  methodName = 'registerAssets'
+  methodName = 'registerAsset'
   methodParams = [
     'address',
     'string',
@@ -38,6 +38,8 @@ export default async function actHandler(params, { wrapper }) {
     methodSignature,
     methodArgs
   )
+
+  console.log(encodedFunctionCall)
 
   const path = await wrapper.getTransactionPath(
     selectedAgentInstance,
