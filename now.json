@@ -9,7 +9,6 @@
     "env": {
       "ARAGON_FORTMATIC_API_KEY": "random",
       "ARAGON_PORTIS_DAPP_ID": "random",
-      "ARAGON_SENTRY_DSN": "random",
       "ARAGON_ETH_SUBSCRIPTION_EVENT_DELAY": "3000"
     }
   }
