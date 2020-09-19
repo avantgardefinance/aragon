@@ -8,7 +8,27 @@ export default async function actHandler(params, { wrapper }) {
     methodWithArgs,
     ethAmount = '0',
   ] = params
-  const [methodName, methodParams, methodArgs] = parseMethodCall(methodWithArgs)
+  let [methodName, methodParams, methodArgs] = parseMethodCall(methodWithArgs)
+
+  methodName = 'registerAssets'
+  methodParams = [
+    'address',
+    'string',
+    'string',
+    'string',
+    'uint256',
+    'uint256[]',
+    'bytes4[]',
+  ]
+  methodArgs = [
+    '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
+    'Uniswap',
+    'UNI',
+    '',
+    '1000000000000000000',
+    [],
+    [],
+  ]
 
   const methodSignature = methodParams
     ? `${methodName}(${methodParams.join(',')})`
