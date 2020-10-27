@@ -20,10 +20,20 @@ export default async function actHandler(params, { wrapper }) {
     'uint256[]',
     'bytes4[]',
   ]
+  // methodArgs = [
+  //   '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
+  //   'Uniswap',
+  //   'UNI',
+  //   '',
+  //   '1000000000000000000',
+  //   [],
+  //   [],
+  // ]
+
   methodArgs = [
-    '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-    'Uniswap',
-    'UNI',
+    '0xa117000000f279D81A1D3cc75430fAA017FA5A2e',
+    'Aragon Network Token (v2)',
+    'ANTv2',
     '',
     '1000000000000000000',
     [],
