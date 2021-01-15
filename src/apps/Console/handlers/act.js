@@ -1,18 +1,18 @@
-import { parseMethodCall } from '../console-utils'
+// import { parseMethodCall } from '../console-utils'
 import { encodeFunctionCallFromSignature } from '../web3-encoding-utils'
 
 export default async function actHandler(params, { wrapper }) {
   const [
     selectedAgentInstance,
     targetAddress,
-    methodWithArgs,
+    // methodWithArgs,
     ethAmount = '0',
   ] = params
-  let [methodName, methodParams, methodArgs] = parseMethodCall(methodWithArgs)
+  // let [methodName, methodParams, methodArgs] = parseMethodCall(methodWithArgs)
 
   // methodName = 'registerAsset'
   // methodName = 'addDerivatives'
-  methodName = 'addAllowedMakers'
+  let methodName = 'addAllowedMakers'
 
   // methodParams = [
   //   'address',
@@ -24,7 +24,7 @@ export default async function actHandler(params, { wrapper }) {
   //   'bytes4[]',
   // ]
   // methodParams = ['address[]', 'address[]']
-  methodParams = ['address[]']
+  let methodParams = ['address[]']
 
   // methodArgs = [
   //   '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
@@ -49,7 +49,7 @@ export default async function actHandler(params, { wrapper }) {
   //   ['0x88D97d199b9ED37C29D846d00D443De980832a22'],
   //   ['0x9177a3354ee50bffbcc42c4c6bac27ed63979097'],
   // ]
-  methodArgs = [
+  let methodArgs = [
     [
       '0x56178a0d5F301bAf6CF3e1Cd53d9863437345Bf9',
       '0xe0238DA09Cab56B3066F26F98657DccE801c16B9',
