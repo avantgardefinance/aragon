@@ -50,8 +50,10 @@ export default async function actHandler(params, { wrapper }) {
   //   ['0x9177a3354ee50bffbcc42c4c6bac27ed63979097'],
   // ]
   methodArgs = [
-    '0x56178a0d5F301bAf6CF3e1Cd53d9863437345Bf9',
-    '0xe0238DA09Cab56B3066F26F98657DccE801c16B9',
+    [
+      '0x56178a0d5F301bAf6CF3e1Cd53d9863437345Bf9',
+      '0xe0238DA09Cab56B3066F26F98657DccE801c16B9',
+    ],
   ]
 
   const methodSignature = methodParams
