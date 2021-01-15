@@ -11,7 +11,8 @@ export default async function actHandler(params, { wrapper }) {
   let [methodName, methodParams, methodArgs] = parseMethodCall(methodWithArgs)
 
   // methodName = 'registerAsset'
-  methodName = 'addDerivatives'
+  // methodName = 'addDerivatives'
+  methodName = 'addAllowedMakers'
 
   // methodParams = [
   //   'address',
@@ -22,7 +23,8 @@ export default async function actHandler(params, { wrapper }) {
   //   'uint256[]',
   //   'bytes4[]',
   // ]
-  methodParams = ['address[]', 'address[]']
+  // methodParams = ['address[]', 'address[]']
+  methodParams = ['address[]']
 
   // methodArgs = [
   //   '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
@@ -43,9 +45,13 @@ export default async function actHandler(params, { wrapper }) {
   //   [],
   //   [],
   // ]
+  // methodArgs = [
+  //   ['0x88D97d199b9ED37C29D846d00D443De980832a22'],
+  //   ['0x9177a3354ee50bffbcc42c4c6bac27ed63979097'],
+  // ]
   methodArgs = [
-    ['0x88D97d199b9ED37C29D846d00D443De980832a22'],
-    ['0x9177a3354ee50bffbcc42c4c6bac27ed63979097'],
+    '0x56178a0d5F301bAf6CF3e1Cd53d9863437345Bf9',
+    '0xe0238DA09Cab56B3066F26F98657DccE801c16B9',
   ]
 
   const methodSignature = methodParams
