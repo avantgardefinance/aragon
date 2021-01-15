@@ -10,16 +10,20 @@ export default async function actHandler(params, { wrapper }) {
   ] = params
   let [methodName, methodParams, methodArgs] = parseMethodCall(methodWithArgs)
 
-  methodName = 'registerAsset'
-  methodParams = [
-    'address',
-    'string',
-    'string',
-    'string',
-    'uint256',
-    'uint256[]',
-    'bytes4[]',
-  ]
+  // methodName = 'registerAsset'
+  methodName = 'addDerivatives'
+
+  // methodParams = [
+  //   'address',
+  //   'string',
+  //   'string',
+  //   'string',
+  //   'uint256',
+  //   'uint256[]',
+  //   'bytes4[]',
+  // ]
+  methodParams = ['address[]', 'address[]']
+
   // methodArgs = [
   //   '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
   //   'Uniswap',
@@ -30,14 +34,18 @@ export default async function actHandler(params, { wrapper }) {
   //   [],
   // ]
 
+  // methodArgs = [
+  //   '0xa117000000f279D81A1D3cc75430fAA017FA5A2e',
+  //   'Aragon Network Token (v2)',
+  //   'ANTv2',
+  //   '',
+  //   '1000000000000000000',
+  //   [],
+  //   [],
+  // ]
   methodArgs = [
-    '0xa117000000f279D81A1D3cc75430fAA017FA5A2e',
-    'Aragon Network Token (v2)',
-    'ANTv2',
-    '',
-    '1000000000000000000',
-    [],
-    [],
+    ['0x88D97d199b9ED37C29D846d00D443De980832a22'],
+    ['0x9177a3354ee50bffbcc42c4c6bac27ed63979097'],
   ]
 
   const methodSignature = methodParams
@@ -48,8 +56,6 @@ export default async function actHandler(params, { wrapper }) {
     methodSignature,
     methodArgs
   )
-
-  console.log(encodedFunctionCall)
 
   const path = await wrapper.getTransactionPath(
     selectedAgentInstance,
