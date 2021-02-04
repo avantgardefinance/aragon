@@ -13,7 +13,8 @@ export default async function actHandler(params, { wrapper }) {
   // methodName = 'registerAsset'
   // methodName = 'addDerivatives'
   // methodName = 'addAllowedMakers'
-  methodName = 'registerAdapters'
+  // methodName = 'registerAdapters'
+  // methodName = 'addPrimitives'
 
   // methodParams = [
   //   'address',
@@ -25,7 +26,7 @@ export default async function actHandler(params, { wrapper }) {
   //   'bytes4[]',
   // ]
   // methodParams = ['address[]', 'address[]']
-  methodParams = ['address[]']
+  methodParams = ['address[]', 'address[]', 'uint8[]']
 
   // methodArgs = [
   //   '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
@@ -58,12 +59,24 @@ export default async function actHandler(params, { wrapper }) {
   // ]
   methodArgs = [
     [
-      '0x56a1892b2276bbb9968d1b5aa0000a71bf0fa7b8',
-      '0x4205073e7AD2F9896F827DBCe496dd2306DB602e',
-      '0xD050DC9E75f24Ae653d282D0cFb772871729e710',
-      '0x972318a0f4935c3153a2AA4c81274DfF621B360b',
-      '0x963E9C15a26d74085ABfC8B48280b650426F998e',
+      '0xBA11D00c5f74255f56a5E366F4F77f5A186d7f55', // BAND
+      '0x4688a8b1F292FDaB17E9a90c8Bc379dC1DBd8713', // COVER
+      '0x1494CA1F11D487c2bBe4543E90080AeBa4BA3C2b', // DPI
+      '0x584bC13c7D411c00c01A62e8019472dE68768430', // HEGIC
+      '0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26', // OGN
+      '0x0258F474786DdFd37ABCE6df6BBb1Dd5dfC4434a', // ORN
+      '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2', // SUSHI
     ],
+    [
+      '0x919C77ACc7373D000b329c1276C76586ed2Dd19F', // BAND / USD
+      '0x0ad50393F11FfAc4dd0fe5F1056448ecb75226Cf', // COVER / USD
+      '0xD2A593BF7594aCE1faD597adb697b5645d5edDB2', // DPI / USD
+      '0xBFC189aC214E6A4a35EBC281ad15669619b75534', // HEGIC / USD
+      '0x2c881B6f3f6B5ff6C975813F87A4dad0b241C15b', // OGN / ETH
+      '0xbA9B2a360eb8aBdb677d6d7f27E12De11AA052ef', // ORN / ETH
+      '0xe572CeF69f43c2E488b33924AF04BDacE19079cf', // SUSHI / ETH
+    ],
+    ['1', '1', '1', '1', '0', '0', '0'],
   ]
 
   const methodSignature = methodParams
