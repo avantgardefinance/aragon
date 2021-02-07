@@ -15,6 +15,7 @@ export default async function actHandler(params, { wrapper }) {
   methodArgs = [
     [
       '0x1494CA1F11D487c2bBe4543E90080AeBa4BA3C2b', // DPI
+      '0xed91879919b71bb6905f23af0a68d231ecf87b14', // DMG
     ],
   ]
 
